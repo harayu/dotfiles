@@ -20,6 +20,7 @@ call dein#add('mattn/emmet-vim')
 call dein#add('junegunn/seoul256.vim')
 call dein#add('hail2u/vim-css3-syntax')
 call dein#add('davidhalter/jedi-vim')
+call dein#add('vim-jp/autofmt')
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
