@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 " Dein.vim 設定
 if &compatible
   set nocompatible               " Be iMproved
@@ -35,7 +34,6 @@ filetype plugin indent on
 "if dein#check_install()
 "  call dein#install()
 "endif
-=======
 if &compatible
  set nocompatible
 endif
@@ -60,19 +58,13 @@ endif
 
 filetype plugin indent on
 syntax enable
->>>>>>> ce5f11a37663609cc037e8fb89621171c68f6ddd
 
 set number
 syntax on
 set title
 set tabstop=4
-<<<<<<< HEAD
-colorscheme iceberg
-" Unified color scheme (default: dark)
-=======
 " seoul256 (dark):
 "   Range:   233 (darkest) ~ 239 (lightest)
 "   Default: 237
->>>>>>> ce5f11a37663609cc037e8fb89621171c68f6ddd
 let g:seoul256_background = 234
 colo seoul256
