@@ -21,7 +21,8 @@ call dein#add('junegunn/seoul256.vim')
 call dein#add('hail2u/vim-css3-syntax')
 call dein#add('davidhalter/jedi-vim')
 call dein#add('vim-jp/autofmt')
-
+call dein#add('tpope/vim-markdown')
+call dein#add('previm/previm')
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
  
@@ -32,9 +33,9 @@ call dein#end()
 filetype plugin indent on
  
 " If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
+if dein#check_install()
+  call dein#install()
+endif
 if &compatible
  set nocompatible
 endif
@@ -64,8 +65,21 @@ set number
 syntax on
 set title
 set tabstop=4
+
+" カラースキーマ設定
 " seoul256 (dark):
 "   Range:   233 (darkest) ~ 239 (lightest)
 "   Default: 237
 let g:seoul256_background = 234
 colo seoul256
+
+" シンタックスハイライト設定
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'css', 'erb=eruby', 'javascript', 'json=javascript', 'ruby', 'sass', 'xml']
+
+" previm 設定
+augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
+
+let g:previm_open_cmd = 'open -a Google\ Chrome.app'
